@@ -1,12 +1,9 @@
 --!strict
 local ReplicatedStorage = game:GetService("ReplicatedStorage")
-local Component = require(ReplicatedStorage.Shared.Components.Benchmarks.Roact.Hooked.State)
+local Component = require(ReplicatedStorage.Shared.Components.Benchmarks.Roact.Hooked.Binding)
 local Constants = require(ReplicatedStorage.Shared.Constants)
 local Roact = require(ReplicatedStorage.Packages.Roact)
-local RoactHooked = require(ReplicatedStorage.Packages.RoactHooked)
 local Types = require(ReplicatedStorage.Shared.Types)
-
-RoactHooked.withHookDetection(Roact)
 
 local Tree
 

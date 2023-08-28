@@ -3,6 +3,7 @@ local ReplicatedStorage = game:GetService("ReplicatedStorage")
 local Helium = require(ReplicatedStorage.Packages.Helium)
 
 local UpdateBenchmark = Helium.Component.Extend("UpdateBenchmark")
+UpdateBenchmark.RedrawBinding = Helium.RedrawBinding.Heartbeat
 
 function UpdateBenchmark:Constructor()
 	self.Value = "Initial"
@@ -12,7 +13,6 @@ function UpdateBenchmark:Constructor()
 	end)
 end
 
-UpdateBenchmark.RedrawBinding = Helium.RedrawBinding.Heartbeat
 function UpdateBenchmark:Redraw()
 	local StringValue: StringValue = self.StringValue
 	if not StringValue then

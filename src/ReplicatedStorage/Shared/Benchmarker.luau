@@ -1,5 +1,8 @@
 --!optimize 2
 --!strict
+local ReplicatedStorage = game:GetService("ReplicatedStorage")
+local Roact = require(ReplicatedStorage.Packages.Roact)
+local RoactHooked = require(ReplicatedStorage.Packages.RoactHooked)
 local Types = require(script.Parent.Types)
 
 local function GetBenchmarks(Root: Instance, ModuleList: {ModuleScript})
@@ -37,10 +40,17 @@ local function Benchmarker(Parent: Instance)
 		return Result
 	end
 
+	local HasRanHooked = false
+
 	print(string.format("Starting %* benchmarks...", #BenchmarkModules))
 	print()
 
 	for _, ModuleScript in BenchmarkModules do
+		if not HasRanHooked and string.find(ModuleScript.Name, "RoactHooked") then
+			RoactHooked.withHookDetection(Roact)
+			HasRanHooked = true
+		end
+
 		local require = require
 		local Benchmark: Types.Benchmark = require(ModuleScript)
 
