@@ -7,7 +7,7 @@ private = true
 
 [dependencies]
 Fusion = "elttob/fusion@0.2.0"
-Helium = "howmanysmall/helium@1.1.3"
+# Helium = "howmanysmall/helium@1.1.3"
 React = "core-packages/react@17.0.1-rc.19"
 ReactReconciler = "core-packages/react-reconciler@17.0.1-rc.19"
 ReactRoblox = "core-packages/react-roblox@17.0.1-rc.16"

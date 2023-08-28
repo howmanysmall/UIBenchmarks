@@ -41,3 +41,5 @@ luac.out
 
 *.code-workspace
 Packages/
+
+*.removed
