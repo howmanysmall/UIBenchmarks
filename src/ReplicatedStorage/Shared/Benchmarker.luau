@@ -12,30 +12,30 @@ end
 
 local function NoOperation() end
 
-local EmptyTimes: {number} = {}
-local function GetEmptyTime(Iterations: number)
-	local Value = EmptyTimes[Iterations]
-	if Value then
-		return Value
-	end
-
-	local StartTime = os.clock()
-	for _ = 1, Iterations do
-		NoOperation()
-	end
-
-	local FinishTime = os.clock()
-	local Result = FinishTime - StartTime
-	EmptyTimes[Iterations] = Result
-	return Result
-end
-
 local function Benchmarker(Parent: Instance)
 	local BenchmarkModules: {ModuleScript} = {}
 	GetBenchmarks(Parent, BenchmarkModules)
 	table.sort(BenchmarkModules, function(A, B)
 		return A.Name < B.Name
 	end)
+
+	local EmptyTimes: {number} = {}
+	local function GetEmptyTime(Iterations: number)
+		local Value = EmptyTimes[Iterations]
+		if Value then
+			return Value
+		end
+
+		local StartTime = os.clock()
+		for _ = 1, Iterations do
+			NoOperation()
+		end
+
+		local FinishTime = os.clock()
+		local Result = FinishTime - StartTime
+		EmptyTimes[Iterations] = Result
+		return Result
+	end
 
 	print(string.format("Starting %* benchmarks...", #BenchmarkModules))
 	print()
