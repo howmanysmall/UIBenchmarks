@@ -1,15 +1,16 @@
 --!strict
 local ReplicatedStorage = game:GetService("ReplicatedStorage")
+local Component = require(ReplicatedStorage.Shared.Components.Benchmarks.Vide)
+local Constants = require(ReplicatedStorage.Shared.Constants)
 local Types = require(ReplicatedStorage.Shared.Types)
-local Vide = require(ReplicatedStorage.Shared.Components.Benchmarks.Vide)
 
 local Tree
 
 local Benchmark: Types.Benchmark = {
-	Iterations = 100000;
+	Iterations = Constants.ITERATIONS;
 	Setup = function()
 		ReplicatedStorage:SetAttribute("Value", "Initial")
-		Tree = Vide()
+		Tree = Component()
 	end;
 
 	Step = function(Index)

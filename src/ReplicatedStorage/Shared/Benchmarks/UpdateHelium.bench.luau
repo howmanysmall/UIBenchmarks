@@ -1,15 +1,16 @@
 --!strict
 local ReplicatedStorage = game:GetService("ReplicatedStorage")
-local Helium = require(ReplicatedStorage.Shared.Components.Benchmarks.Helium)
+local Component = require(ReplicatedStorage.Shared.Components.Benchmarks.Helium)
+local Constants = require(ReplicatedStorage.Shared.Constants)
 local Types = require(ReplicatedStorage.Shared.Types)
 
 local Tree
 
 local Benchmark: Types.Benchmark = {
-	Iterations = 100000;
+	Iterations = Constants.ITERATIONS;
 	Setup = function()
 		ReplicatedStorage:SetAttribute("Value", "Initial")
-		Tree = Helium.new()
+		Tree = Component.new()
 	end;
 
 	Step = function(Index)
