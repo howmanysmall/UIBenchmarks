@@ -74,6 +74,8 @@ local function Benchmarker(Parent: Instance)
 		print(Message)
 		print()
 	end
+
+	print("Benchmarks complete!")
 end
 
 return Benchmarker
