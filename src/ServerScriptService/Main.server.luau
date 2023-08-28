@@ -3,4 +3,4 @@
 local ReplicatedStorage = game:GetService("ReplicatedStorage")
 local Benchmarker = require(ReplicatedStorage.Shared.Benchmarker)
 
-Benchmarker(ReplicatedStorage.Shared.Benchmarks)
+Benchmarker(ReplicatedStorage.Shared.Benchmarks, true)
