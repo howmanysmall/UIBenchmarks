@@ -1,0 +1,35 @@
+{
+	"name": "UIBenchmarks",
+	"servePort": 25565,
+	"globIgnorePaths": ["**/*.spec.lua", "**/*.spec.luau"],
+
+	"tree": {
+		"$className": "DataModel",
+		"ReplicatedStorage": {
+			"$className": "ReplicatedStorage",
+			"$ignoreUnknownInstances": true,
+			"$path": "src/ReplicatedStorage",
+			"Packages": {
+				"$path": "Packages",
+				"RoactHooked": {"$path": "Vendor/RoactHooked"},
+				"vide": {"$path": "Vendor/vide"}
+			}
+		},
+
+		"ServerScriptService": {
+			"$className": "ServerScriptService",
+			"$ignoreUnknownInstances": true,
+			"$path": "src/ServerScriptService"
+		},
+
+		"StarterPlayer": {
+			"$className": "StarterPlayer",
+			"$ignoreUnknownInstances": true,
+			"StarterPlayerScripts": {
+				"$className": "StarterPlayerScripts",
+				"$ignoreUnknownInstances": true,
+				"$path": "src/StarterPlayer/StarterPlayerScripts"
+			}
+		}
+	}
+}

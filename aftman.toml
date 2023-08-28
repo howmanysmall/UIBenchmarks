@@ -1,0 +1,5 @@
+[tools]
+rojo = "UpliftGames/rojo@7.3.0-uplift.11"
+wally = "UpliftGames/wally@0.3.1"
+wally-package-types = "JohnnyMorganz/wally-package-types@1.2.1"
+lune = "filiptibell/lune@0.7.7"
