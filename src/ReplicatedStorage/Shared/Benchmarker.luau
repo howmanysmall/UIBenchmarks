@@ -68,7 +68,7 @@ local function Benchmarker(Parent: Instance)
 			ModuleScript.Name,
 			Benchmark.Iterations,
 			TotalTime,
-			1e9 * TotalTime / Benchmark.Iterations
+			1E9 * TotalTime / Benchmark.Iterations
 		)
 
 		print(Message)
