@@ -2,9 +2,9 @@
 
 export type Benchmark = {
 	Iterations: number,
-	Setup: () -> (),
+	Setup: nil | () -> (),
 	Step: (Index: number) -> (),
-	Teardown: () -> (),
+	Teardown: nil | () -> (),
 }
 
 return false
