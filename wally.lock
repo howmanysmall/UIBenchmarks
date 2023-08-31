@@ -3,6 +3,11 @@
 registry = "test"
 
 [[package]]
+name = "ambergracerblx/pract"
+version = "1.0.10"
+dependencies = []
+
+[[package]]
 name = "core-packages/boolean"
 version = "1.2.3"
 dependencies = [["Number", "core-packages/number@1.2.3"]]
@@ -105,7 +110,7 @@ dependencies = [["Roact", "roblox/roact@1.4.4"]]
 [[package]]
 name = "howmanysmall/uibenchmarks"
 version = "0.1.0"
-dependencies = [["Fusion", "elttob/fusion@0.2.0"], ["HowRoactHooked", "howmanysmall/roact-hooked-luau@0.1.0"], ["React", "core-packages/react@17.0.1-rc.19"], ["ReactReconciler", "core-packages/react-reconciler@17.0.1-rc.19"], ["ReactRoblox", "core-packages/react-roblox@17.0.1-rc.19"], ["ReactTree", "howmanysmall/react-tree@1.0.0"], ["Roact", "roblox/roact@1.4.4"], ["RoactHooks", "kampfkarren/roact-hooks@0.5.1"]]
+dependencies = [["Fusion", "elttob/fusion@0.2.0"], ["HowRoactHooked", "howmanysmall/roact-hooked-luau@0.1.0"], ["Pract", "ambergracerblx/pract@1.0.10"], ["React", "core-packages/react@17.0.1-rc.19"], ["ReactReconciler", "core-packages/react-reconciler@17.0.1-rc.19"], ["ReactRoblox", "core-packages/react-roblox@17.0.1-rc.19"], ["ReactTree", "howmanysmall/react-tree@1.0.0"], ["Roact", "roblox/roact@1.4.4"], ["RoactHooks", "kampfkarren/roact-hooks@0.5.1"]]
 
 [[package]]
 name = "jsdotlua/boolean"

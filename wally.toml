@@ -15,6 +15,7 @@ ReactTree = "howmanysmall/react-tree@1.0.0"
 Roact = "roblox/roact@1.4.4"
 HowRoactHooked = "howmanysmall/roact-hooked-luau@0.1.0"
 RoactHooks = "kampfkarren/roact-hooks@0.5.1"
+Pract = "ambergracerblx/pract@1.0.10"
 
 [place]
 shared-packages = "game:GetService(\"ReplicatedStorage\").Packages"
